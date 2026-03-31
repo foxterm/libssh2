@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '17.0'
   s.osx.deployment_target = '14.0'
   s.prepare_command = <<-CMD
+    rm -rf src
     git clone --depth 1 --branch libssh2-#{s.version} https://github.com/libssh2/libssh2.git src
   CMD
   s.source_files = 'src/src/*.{c,h}', 'src/include/*.h'
