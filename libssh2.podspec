@@ -7,8 +7,11 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { 'foxterm' => 'admin@foxterm.app' }
   s.source           = { :git => 'https://github.com/libssh2/libssh2.git', :tag => "libssh2-#{s.version}" }
-  s.ios.deployment_target = '17.0'
-  s.osx.deployment_target = '14.0'
+  s.ios.deployment_target = "12.0"
+  s.osx.deployment_target = "10.15"
+  s.tvos.deployment_target = "12.0"
+  s.visionos.deployment_target = "1.0"
+  s.watchos.deployment_target = "8.0"
   s.source_files = 'libssh2/src/*.{c,h}', 'libssh2/include/*.h'
   s.public_header_files = 'libssh2/include/*.h'
   s.dependency 'OpenSSL-Universal'
