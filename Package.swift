@@ -13,8 +13,8 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/krzyzanowskim/OpenSSL.git",
-            .upToNextMinor(from: "3.6.0001")
+            url: "https://github.com/Lakr233/openssl-spm.git",
+            .upToNextMinor(from: "4.0.0")
         )
     ],
     targets: [
