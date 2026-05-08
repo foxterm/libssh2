@@ -13,15 +13,19 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/krzyzanowskim/OpenSSL.git",
-            .upToNextMinor(from: "3.6.0001")
+            url: "https://github.com/partout-io/openssl-apple.git",
+            .upToNextMinor(from: "3.6.2")
         )
     ],
     targets: [
         .target(
             name: "CSSH2",
             dependencies: [
-                .product(name: "OpenSSL", package: "OpenSSL")
+                .product(
+                    name: "openssl",
+                    package: "openssl-apple",
+                    moduleAliases: ["openssl": "OpenSSL"]
+                )
             ],
             path: "libssh2",
             exclude: [
