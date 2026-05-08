@@ -22,9 +22,9 @@ let package = Package(
             name: "CSSH2",
             dependencies: [
                 .product(
-                    name: "openssl",
+                    name: "openssl-apple",
                     package: "openssl-apple",
-                    moduleAliases: ["openssl": "OpenSSL"]
+                    moduleAliases: ["openssl-apple": "OpenSSL"]
                 )
             ],
             path: "libssh2",
