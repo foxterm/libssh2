@@ -13,6 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
+            name: "OpenSSL",
             url: "https://github.com/Lakr233/openssl-spm.git",
             .upToNextMinor(from: "4.0.0")
         )
