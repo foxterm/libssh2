@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "CSSH2",
+    name: "libssh2",
     platforms: [
         .macOS(.v14),
         .iOS(.v17),
