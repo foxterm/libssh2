@@ -15,7 +15,7 @@ let package = Package(
         .package(
             name: "OpenSSL",
             url: "https://github.com/Lakr233/openssl-spm.git",
-            .upToNextMinor(from: "4.0.0")
+            from: "3.6.2"
         )
     ],
     targets: [
