@@ -12,7 +12,8 @@ let package = Package(
         .library(name: "CSSH2", targets: ["CSSH2"])
     ],
     dependencies: [
-        .package(url: "https://github.com/foxterm/OpenSSL.git", branch: "main")
+        .package(
+            url: "https://github.com/krzyzanowskim/OpenSSL.git", .upToNextMajor(from: "3.6.0001"))
     ],
     targets: [
         .target(
