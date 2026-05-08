@@ -62,6 +62,7 @@ let package = Package(
                 .define("HAVE_STRTOLL"),
                 .define("HAVE_O_NONBLOCK"),
                 .define("HAVE_FIONBIO"),
+                .define("LIBSSH2DEBUG", to: "1", .when(configuration: .debug)),
             ],
             linkerSettings: [
                 .linkedLibrary("z")
