@@ -6,7 +6,7 @@ let package = Package(
     name: "libssh2",
     platforms: [
         .macOS(.v14),
-        .iOS(.v17),
+        .iOS(.v16),
     ],
     products: [
         .library(name: "CSSH2", targets: ["CSSH2"])
