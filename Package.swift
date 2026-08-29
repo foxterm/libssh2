@@ -35,11 +35,12 @@ let package = Package(
             publicHeadersPath: "include",
             cSettings: [
                 // --- 关键：加密算法功能开关 ---
-                .define("LIBSSH2_DSA"),  // 开启 DSA 支持
-                .define("LIBSSH2_RSA"),  // 开启 RSA 支持
-                .define("LIBSSH2_ECDSA"),  // 开启 ECDSA 支持
-                .define("LIBSSH2_ED25519"),  // 开启 ED25519 支持
-                .define("OPENSSL_SUPPRESS_DEPRECATED"),  // 抑制 OpenSSL 3.x 弃用 API 警告
+                .define("LIBSSH2_DSA"),
+                .define("LIBSSH2_RSA"),
+                .define("LIBSSH2_ECDSA"),
+                .define("LIBSSH2_ED25519"),
+                .define("OPENSSL_SUPPRESS_DEPRECATED"),
+                .unsafeFlags(["-Wno-deprecated-declarations"]),
                 // --- 基础配置 ---
                 .define("HAVE_LIBSSL"),
                 .define("LIBSSH2_OPENSSL"),
