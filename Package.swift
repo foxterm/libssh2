@@ -34,13 +34,14 @@ let package = Package(
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [
-                .define("LIBSSH2_DSA_ENABLE"),
-                .define("LIBSSH2_RSA"),
-                .define("LIBSSH2_RSA_SHA2"),
-                .define("LIBSSH2_RSA_SHA1"),
-                .define("LIBSSH2_ECDSA"),
-                .define("LIBSSH2_ED25519"),
-                .define("OPENSSL_SUPPRESS_DEPRECATED"),
+                .define("LIBSSH2_DSA_ENABLE"),  // 开启 ssh-dss
+                .define("LIBSSH2_RSA"),  // 开启 RSA 主开关
+                .define("LIBSSH2_RSA_SHA2"),  // 开启 rsa-sha2-256 / rsa-sha2-512
+                .define("LIBSSH2_RSA_SHA1"),  // 开启 ssh-rsa (SHA-1)
+                .define("LIBSSH2_ECDSA"),  // 开启 ecdsa 曲线
+                .define("LIBSSH2_ED25519"),  // 开启 ed25519
+                .define("OPENSSL_SUPPRESS_DEPRECATED"),  //OpenSSL 3.x 弃用警告抑制
+                // 基础宏定义
                 .define("HAVE_LIBSSL"),
                 .define("LIBSSH2_OPENSSL"),
                 .define("HAVE_LIBZ"),
