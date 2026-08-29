@@ -34,6 +34,8 @@ let package = Package(
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [
+                .define("LIBSSH2_DSA"),
+                .define("OPENSSL_SUPPRESS_DEPRECATED"),
                 .define("HAVE_LIBSSL"),
                 .define("LIBSSH2_OPENSSL"),
                 .define("HAVE_LIBZ"),
