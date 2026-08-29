@@ -34,14 +34,6 @@ let package = Package(
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [
-                // --- 关键：加密算法功能开关 ---
-                .define("LIBSSH2_DSA"),
-                .define("LIBSSH2_RSA"),
-                .define("LIBSSH2_ECDSA"),
-                .define("LIBSSH2_ED25519"),
-                .define("OPENSSL_SUPPRESS_DEPRECATED"),
-                .unsafeFlags(["-Wno-deprecated-declarations"]),
-                // --- 基础配置 ---
                 .define("HAVE_LIBSSL"),
                 .define("LIBSSH2_OPENSSL"),
                 .define("HAVE_LIBZ"),
