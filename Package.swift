@@ -34,6 +34,13 @@ let package = Package(
             sources: ["src"],
             publicHeadersPath: "include",
             cSettings: [
+                .define("LIBSSH2_DSA_ENABLE"),
+                .define("LIBSSH2_RSA"),
+                .define("LIBSSH2_RSA_SHA2"),
+                .define("LIBSSH2_RSA_SHA1"),
+                .define("LIBSSH2_ECDSA"),
+                .define("LIBSSH2_ED25519"),
+                .define("OPENSSL_SUPPRESS_DEPRECATED"),
                 .define("HAVE_LIBSSL"),
                 .define("LIBSSH2_OPENSSL"),
                 .define("HAVE_LIBZ"),
