@@ -1,12 +1,15 @@
-// swift-tools-version:5.10
+// swift-tools-version:5.6
 
 import PackageDescription
 
 let package = Package(
     name: "libssh2",
     platforms: [
-        .macOS(.v14),
-        .iOS(.v16),
+        .iOS(.v12),
+        .macOS(.v10_15),
+        .tvOS(.v12),
+        .watchOS(.v8),
+        .custom("xros", versionString: "1.3"),
     ],
     products: [
         .library(name: "CSSH2", targets: ["CSSH2"])
